@@ -13,9 +13,13 @@ namespace Task1._1
                 .Build();
 
             string name = config["name"];
-            Console.WriteLine(string.IsNullOrEmpty(name)
-                ? $"Please, use commandline -name 'Your name'."
-                : HelloGenerator.GetHello(name));
+            if (string.IsNullOrEmpty(name))
+            {
+                Console.WriteLine("Write your name, please:");
+                name = Console.ReadLine();
+            }
+
+            Console.WriteLine(HelloGenerator.GetHello(name));
         }
     }
 }
