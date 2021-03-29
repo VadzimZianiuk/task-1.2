@@ -1,6 +1,6 @@
-﻿using System;
-using Library;
+﻿using Library;
 using Microsoft.Extensions.Configuration;
+using System;
 
 namespace Task1._1
 {
@@ -20,6 +20,7 @@ namespace Task1._1
             }
 
             Console.WriteLine(HelloGenerator.GetHello(name));
+            Console.ReadKey();
         }
     }
 }
